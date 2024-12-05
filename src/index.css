@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    font-family: 'Egyptian Slate Pro', sans-serif;
+}
+
+.header {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* Tailwind utility-based styles with custom hover underline animation */
+
+.links {
+  position: relative;
+  display: inline-block;
+  font-weight: 300;
+}
+
+.links::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0.5px;
+  background-color: #000; /* Black color for the underline */
+  transition: width 0.3s ease, left, 0.3s ease;
+}
+
+.links:hover::after {
+  width: 70%;
+  left: 0;
+}
+
+
